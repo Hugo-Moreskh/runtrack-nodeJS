@@ -1,0 +1,72 @@
+Job 1 :
+
+Installation 
+
+Job 2 : 
+
+Show dbs
+
+Job 3:
+
+db.product.insertOne({
+  name: "chaussure",
+  description: "une paire de chaussures",
+  price: 35,
+  quantity: 120
+})
+
+Job 4:
+db.product.insertOne({  name: "Pantalon noir",
+  description: "Un pantalon noir",
+  price: 14.99,
+  quantity: 12})
+
+db.product.insertOne({
+  name: "chaussettes",
+  description: "chaussettes cool !",
+  price: 6,
+  quantity: 6
+})
+
+Job 5:
+db.category.insertMany([
+  { name: "Vetement" },
+  { name: "chaussure" },
+  { name: "bébé" }
+])
+
+Job 6:
+
+Show collections
+
+Job 7:
+db.category.find()
+
+Job 8:
+db.category.find().limit(2)
+
+Job 9:
+db.product.find().sort({price: 1})
+
+Job 10:
+db.product.find().sort({price: -1})
+
+Job 11:
+db.product.find({ price: { $gt: 5 }, quantity: { $lt: 100 } })
+
+Job 12:
+db.product.find({ price: { $gt: 14.99 }, quantity: { $gt: 100 } })
+
+Job 13:
+db.product.find({}, { _id: 0 })
+
+Job 14: 
+db.product.findOne({ _id: ObjectId("66471b6fa4415ee0d9b011d2") })
+
+Job 15:
+db.category.updateOne(
+  { name: 'catégorie 3' },
+  { $set: { name: 'vetements pour enfant' } }
+)
+
+Job 16: 
